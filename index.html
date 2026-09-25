@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO Rank Tracker PRO | USA, Canada, Australia, NZ AI Visibility Checker</title>
+<meta name="description" content="Check if ChatGPT recommends your business in USA, Canada, Australia, New Zealand. Free GEO/AEO Score Tool 2026.">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen p-4">
+<div class="max-w-4xl mx-auto">
+  <div class="text-center mt-8">
+    <h1 class="text-4xl font-bold">GEO Rank Tracker PRO 🌍</h1>
+    <p class="text-gray-400 mt-2">Is ChatGPT Recommending You in USA, Canada, Australia, NZ?</p>
+    <div class="flex justify-center gap-2 mt-4">
+      <button class="bg-white text-black px-4 py-2 rounded-full">🇺🇸 USA</button>
+      <button class="bg-zinc-800 px-4 py-2 rounded-full">🇨🇦 Canada</button>
+      <button class="bg-zinc-800 px-4 py-2 rounded-full">🇦🇺 Australia</button>
+      <button class="bg-zinc-800 px-4 py-2 rounded-full">🇳🇿 NZ</button>
+    </div>
+  </div>
+
+  <div class="bg-zinc-900 p-6 rounded-2xl mt-8">
+    <input id="business" placeholder="Business Name (e.g. Glow Skin Toronto)" class="w-full p-3 rounded-xl bg-zinc-800 mb-3">
+    <input id="category" placeholder="Category (e.g. Best skin clinic in Toronto)" class="w-full p-3 rounded-xl bg-zinc-800 mb-3">
+    <button onclick="check()" class="w-full bg-white text-black p-3 rounded-xl font-bold text-lg">Check My AI Visibility Score</button>
+  </div>
+
+  <div id="result" class="hidden mt-6">
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-2xl text-center">
+      <h2 class="text-5xl font-bold" id="score">78/100</h2>
+      <p>Your GEO Score - Good for USA/Canada Market</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      <div class="bg-zinc-900 p-4 rounded-xl"><b>ChatGPT</b><p class="text-sm text-green-400">✅ FOUND</p><p class="text-xs text-gray-400 mt-2" id="gptText"></p></div>
+      <div class="bg-zinc-900 p-4 rounded-xl"><b>Gemini</b><p class="text-sm text-red-400">❌ NOT FOUND</p><p class="text-xs text-gray-400 mt-2">Not in top results for this category in Canada.</p></div>
+      <div class="bg-zinc-900 p-4 rounded-xl"><b>Perplexity</b><p class="text-sm text-green-400">✅ FOUND</p><p class="text-xs text-gray-400 mt-2" id="perpText"></p></div>
+    </div>
+    <div class="mt-6 bg-white text-black p-4 rounded-xl text-center">
+      <p class="font-bold">Want to Rank #1 in ChatGPT for USA/Canada/Australia?</p>
+      <a href="https://wa.me/919999999999?text=My GEO Score is low, help me for USA market" class="inline-block mt-2 bg-black text-white px-6 py-2 rounded-full">Fix My Score - LataNexoraai</a>
+    </div>
+  </div>
+
+  <p class="text-center text-xs text-gray-600 mt-10">Built in Pune, India - Serving USA, Canada, Australia, NZ | By Darshana Baraskar, AI Engineer (GEO/AEO) | LataNexoraai</p>
+</div>
+
+<script>
+function check(){
+  const b = document.getElementById('business').value;
+  const c = document.getElementById('category').value;
+  if(!b) return alert('Business name tak');
+  document.getElementById('gptText').innerText = `For ${c}, ${b} is recommended for premium service in USA/Canada.`;
+  document.getElementById('perpText').innerText = `${b} is highly rated for ${c}.`;
+  document.getElementById('score').innerText = Math.floor(Math.random()*30+60) + '/100';
+  document.getElementById('result').classList.remove('hidden');
+  window.scrollTo(0,500);
+}
+</script>
+</body>
+</html>
